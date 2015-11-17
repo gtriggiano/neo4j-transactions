@@ -1,3 +1,4 @@
 # Summary
 
-* [Introduction](Introduction.md)
+* [Introduction](/README.md)
+* [Introduction](/docs/Introduction.md)
