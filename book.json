@@ -1,6 +1,10 @@
 {
-  "gitbook": "2.5.2",
-  "structure": {
-    "summary": "docs/README.md"
-  }
+    "gitbook": "2.5.2",
+    "structure": {
+        "summary": "docs/README.md"
+    },
+    "plugins": [
+        "github"
+    ],
+    "pluginsConfig": {}
 }
