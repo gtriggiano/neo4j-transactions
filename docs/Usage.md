@@ -30,8 +30,7 @@ tx.transact([
     tx.statement([ // ES5
         'MATCH (post:Post)',
         'WHERE post._id = {postId}',
-        'OPTIONAL MATCH (post)<-[:COMMENTS]-(comment:Comment)',
-        'RETURN post, COLLECT(comment) as comments'
+        'RETURN post'
     ], {postId: 42}),
     tx.stmt( // stmt is a short alias for statement
         `MATCH (post:Post)
