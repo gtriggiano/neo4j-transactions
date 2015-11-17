@@ -2,5 +2,5 @@
 
 * [Summary](SUMMARY.md)
 * [Tests](docs/Tests.md)
-* Usage
+* [Usage](docs/Usage.md)
 
