@@ -5,7 +5,7 @@
     "language": "en",
     "structure": {
         "readme": "docs/SUMMARY.md",
-        "summary": "docs/SUMMARY.md"
+        "summary": "SUMMARY.md"
     },
     "plugins": [
         "github"
