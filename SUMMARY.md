@@ -1,6 +1,6 @@
 # Summary
 
 * [Summary](SUMMARY.md)
-* [Introduction](docs/Introduction.md)
+* [Install](docs/Install.md)
 * [Tests](docs/Tests.md)
 
