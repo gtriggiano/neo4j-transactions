@@ -36,7 +36,7 @@ tx.transact([
 .then(results => {
     if (!results[0].length) throw new Error('User not found')
     if (!results[1].length) throw new Error('Post not found')
-    return tx.commit([
+    tx.commit([
         tx.stmt( // stmt is a short alias for statement
             `MATCH (post:Post)
             WHERE post._id = {postId}
@@ -53,9 +53,14 @@ tx.transact([
         )
     ])
 })
-.then((results) => {
+.then(results => {
     var result = results[0]
     console.log(result.comment) // {text: "Good post!", createdAt: 123456789}
     console.log(result.author) // {_id: "xyz", name: "..."}
+    null
+})
+.catch(e => {
+    console.log(e.message)
+    tx.rollback().catch(function () {})
 })
 ```
