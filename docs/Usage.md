@@ -37,13 +37,14 @@ tx.transact([
         `MATCH (post:Post)
         WHERE post._id = {postId}
         WITH post
-        MATCH (user:User)
-        WHERE user._id = {authorId}
+        MATCH (author:User)
+        WHERE author._id = {authorId}
         CREATE (comment:Comment)
         SET comment = {comment}
         SET comment.createdAt = TIMESTAMP()
         CREATE (post)<-[:COMMENTS]-(comment)
-        CREATE (comment)<-[:WROTE]-(user)`,
+        CREATE (comment)<-[:WROTE]-(author)
+        RETURN comment, author`,
         {authorId: 'xyz', postId: 42, comment: {text: 'Good post!'}}
     )
 ])
