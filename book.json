@@ -1,7 +1,11 @@
 {
-    "gitbook": "2.5.2",
+    "gitbook": "2.x.x",
+    "title": "Neo4j Transactions",
+    "description": "Documentation for the node module neo4j-transactions.",
+    "language": "en",
     "structure": {
-        "summary": "docs/README.md"
+        "readme": "docs/README.md"
+        "summary": "docs/SUMMARY.md"
     },
     "plugins": [
         "github"
