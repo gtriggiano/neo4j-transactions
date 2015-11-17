@@ -1,6 +1,6 @@
 # Summary
 
 * [Summary](SUMMARY.md)
-* [Tests](docs/Tests.md)
 * [Usage](docs/Usage.md)
+* [Tests](docs/Tests.md)
 
