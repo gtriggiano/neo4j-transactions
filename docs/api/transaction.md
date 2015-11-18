@@ -8,6 +8,8 @@ var tx = client.transaction()
 ## Api
 
 ### Methods
+
+#### A note about promises
 Many of the following methods return **[bluebird](http://bluebirdjs.com/docs/getting-started.html) promises**.
 
 _If working with callbacks is more your thing [I hope not :)] you can pass an `callback` function to them. **In this case the method will not generate nor return any promise**_.
