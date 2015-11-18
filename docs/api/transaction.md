@@ -10,7 +10,7 @@ var tx = client.transaction()
 ### Methods
 Many of the following methods return **[bluebird](http://bluebirdjs.com/docs/getting-started.html) promises**.
 
-_If working with callbacks is more your thing [I hope not :)] you can pass an `callback` function to them. **In this case any promise will be generated nor returned**_.
+_If working with callbacks is more your thing [I hope not :)] you can pass an `callback` function to them. **In this case the method will not generated nor return any promise**_.
 
 Promises are a powerful approach to async workflows and routines.
 Moreover bluebird promises let you `catch` them *discriminating* by error.
