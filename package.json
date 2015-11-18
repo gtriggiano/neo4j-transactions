@@ -1,6 +1,6 @@
 {
   "name": "neo4j-transactions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Javascript driver for executing Neo4j transactions. Works with promises and callback style too.",
   "main": "lib/index.js",
   "scripts": {
