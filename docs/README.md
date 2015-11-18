@@ -1,7 +1,7 @@
 # Table Of Contents
 
 * [Read Me](/README.md)
-* [Api]
+* [Api](/docs/api/index.md)
    * [Client](/docs/api/client.md)
 * [Tests](/docs/Tests/index.md)
    * [Running tests](/docs/Tests/running_tests.md)
