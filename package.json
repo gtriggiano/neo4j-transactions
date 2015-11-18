@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "standard lib/*.js && mocha --reporter spec",
-    "updateTestsInDocs": "standard lib/*.js && cat test/utils/outputheader.md > docs/Tests_output.md && mocha --reporter markdown >> docs/Tests_output.md",
+    "updateTestsInDocs": "standard lib/*.js && cat test/utils/outputheader.md > docs/Tests/tests_output.md && mocha --reporter markdown >> docs/Tests/tests_output.md",
     "downloadNeo4j": "node test/utils/downloadNeo4j.js",
     "startNeo4j": "./neo4j/bin/neo4j console"
   },
