@@ -1,6 +1,6 @@
-# Neo4j Transaction
+# Neo4j Transactions
 
-Neo4j Transaction is a javascript driver for executing transactions on a [Neo4j](http://neo4j.com/) database, calling the [transactional Cypher HTTP endpoint](http://neo4j.com/docs/stable/rest-api-transactional.html).
+Neo4j Transactions is a javascript driver for executing transactions on a [Neo4j](http://neo4j.com/) database, calling the [transactional Cypher HTTP endpoint](http://neo4j.com/docs/stable/rest-api-transactional.html).
 
 Works with a promises based or a callback based code style. The choice is up to you.
 
