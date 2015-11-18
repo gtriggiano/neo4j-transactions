@@ -14,7 +14,7 @@
      - [.extend([callback])](#transaction-instance-extendcallback)
      - [.rollback([callback])](#transaction-instance-rollbackcallback)
 <a name=""></a>
- 
+
 <a name="neo4joptions"></a>
 # Neo4j([options])
 should be a function.
@@ -1879,4 +1879,3 @@ tx.rollback()
 .catch(errors.TransactionInactive, function () { done() })
 .catch(done)
 ```
-
