@@ -22,4 +22,4 @@ before_install:
   - cp test/utils/auth neo4j-community-$NEO4J_VERSION/data/dbms/
   - neo4j-community-$NEO4J_VERSION/bin/neo4j start
 
-script: npm run test-travis
+script: npm run test
