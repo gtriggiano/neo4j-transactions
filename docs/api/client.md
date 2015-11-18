@@ -8,8 +8,9 @@ var neo4jClient = Neo4j(options)
 ```
 
 #### `options` keys:
+
 | key | Default value | Description |
-| -- | -- | -- |
+| ---- | ---- | ---- |
 | `url` | http://localhost:7474 | The url of the database up to the port. |
 | `timeout` | 5000 | The connection timeout of the calls to database. It's passed to [Wreck](https://github.com/hapijs/wreck)|
 | `connectionAttempts` | 30 | The number of retries the client attempts to connect to the database. See below. |
