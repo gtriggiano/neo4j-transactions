@@ -1,4 +1,4 @@
-# Summary
+# Table Of Contents
 
 * [Tests](/docs/Tests/index.md)
    * [Running tests](/docs/Tests/running_tests.md)
