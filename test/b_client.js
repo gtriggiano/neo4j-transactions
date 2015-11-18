@@ -513,6 +513,13 @@ describe('Client instance', function () {
     })
   })
 
+  describe('.tx()', function () {
+    it('should be an alias of `.transaction()`', function () {
+      var client = new Client()
+      ;(client.tx === client.transaction).should.be.true()
+    })
+  })
+
   describe('.testNeo4jAvaliability([silence], [timesToRepeat])', function () {
     it('should return the client instance for chainability', function () {
       var client = new Client()

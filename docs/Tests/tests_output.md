@@ -4,6 +4,7 @@
    - [Client instance](#client-instance)
      - [.databaseAvaliable](#client-instance-databaseavaliable)
      - [.transaction()](#client-instance-transaction)
+     - [.tx()](#client-instance-tx)
      - [.testNeo4jAvaliability([silence], [timesToRepeat])](#client-instance-testneo4javaliabilitysilence-timestorepeat)
      - [.updateCredentials([username], [password])](#client-instance-updatecredentialsusername-password)
    - [Transaction instance](#transaction-instance)
@@ -618,6 +619,15 @@ should return a Transaction instance.
 var client = new Client()
 var transaction = client.transaction()
 transaction.should.be.instanceOf(Transaction)
+```
+
+<a name="client-instance-tx"></a>
+## .tx()
+should be an alias of `.transaction()`.
+
+```js
+var client = new Client()
+;(client.tx === client.transaction).should.be.true()
 ```
 
 <a name="client-instance-testneo4javaliabilitysilence-timestorepeat"></a>

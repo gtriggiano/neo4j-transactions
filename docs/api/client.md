@@ -34,6 +34,8 @@ The produced `client` is an instance of Client.
 
 #### `client.transaction()`
 
+#### `client.tx()`
+
 ### Events
 
 The client is an Event Emitter.
