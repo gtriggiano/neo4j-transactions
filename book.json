@@ -4,7 +4,7 @@
     "description": "Documentation for the node module neo4j-transactions.",
     "language": "en",
     "structure": {
-        "readme": "docs/Introduction.md",
+        "readme": "SUMMARY.md",
         "summary": "SUMMARY.md"
     },
     "plugins": [
