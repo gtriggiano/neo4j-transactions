@@ -62,4 +62,4 @@ tx.commit([ // commit takes a list of statements
 ```
 
 ## Api docs
-You can read the documentation [in the repository](/docs/api/index.md) or on [gitbook.com](https://www.gitbook.com/book/gtriggiano/neo4j-transactions/details), where you can also download the [**PDF**](https://www.gitbook.com/download/pdf/book/gtriggiano/neo4j-transactions), [**ePub**](https://www.gitbook.com/download/epub/book/gtriggiano/neo4j-transactions) and [**MOBI**](https://www.gitbook.com/download/mobi/book/gtriggiano/neo4j-transactions) versions.
+You can read the documentation [in the repository](https://github.com/gtriggiano/neo4j-transactions/tree/master/docs) or on [gitbook.com](https://www.gitbook.com/book/gtriggiano/neo4j-transactions/details), where you can also download the [**PDF**](https://www.gitbook.com/download/pdf/book/gtriggiano/neo4j-transactions), [**ePub**](https://www.gitbook.com/download/epub/book/gtriggiano/neo4j-transactions) and [**MOBI**](https://www.gitbook.com/download/mobi/book/gtriggiano/neo4j-transactions) versions.
