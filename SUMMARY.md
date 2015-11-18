@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * [Summary](SUMMARY.md)
 * [Introduction](docs/Introduction.md)
 * [Usage](docs/Usage.md)
