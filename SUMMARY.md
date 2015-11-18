@@ -2,6 +2,6 @@
 
 * [Summary](SUMMARY.md)
 * [Introduction](docs/Introduction.md)
-* Tests
+* [Tests](docs/Tests.md)
    * Running tests
 
