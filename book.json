@@ -12,7 +12,7 @@
     ],
     "pluginsConfig": {
         "github": {
-            "url": "https://github.com/gtriggiano/neo4j-transactions"
+            "url": "https://github.com/gtriggiano/neo4j-transactions/"
         }
     }
 }
