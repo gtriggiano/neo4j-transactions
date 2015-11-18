@@ -35,7 +35,7 @@ client.databaseAvaliable
 })
 
 // Create a transaction object
-var tx = neo4jClient.transaction()
+var tx = client.transaction()
 
 var newPost = {
   title: 'neo4j-transactions is a tiny library',
