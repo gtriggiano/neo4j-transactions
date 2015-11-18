@@ -2,6 +2,7 @@
 
 * [Read Me](/README.md)
 * [Api](/docs/api/index.md)
+   * [Errors](/docs/api/errors.md)
    * [Client](/docs/api/client.md)
    * [Transaction](/docs/api/transaction.md)
 * [Tests](/docs/Tests/index.md)
