@@ -19,7 +19,7 @@ var client = Neo4j(options)
 
 The produced `client` is an instance of Client.
 
-# Client
+# `client`
 
 
 ### Properties
