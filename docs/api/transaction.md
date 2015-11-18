@@ -15,8 +15,9 @@ Many of the following methods return **[bluebird](http://bluebirdjs.com/docs/get
 _If working with callbacks is more your thing [I hope not :)] you can pass an `callback` function to them. **In this case the method will not generate nor return any promise**_.
 
 Promises are a powerful approach to async workflows and routines.
-Moreover bluebird promises let you `catch` them *discriminating* by error constructor.
-For example:
+Moreover bluebird promises let you `catch` them *discriminating* by error constructor. Error constructors are widely exposed by the library, see [Errors](errors.md)
+
+Example:
 ```javascript
 var Neo4j = require('neo4j-transactions')
 
