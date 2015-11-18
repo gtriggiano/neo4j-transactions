@@ -1,7 +1,7 @@
 # Summary
 
 * [Summary](SUMMARY.md)
-* [Introduction](docs/Introduction.md)
+* [Intro](docs/Introduction.md)
 * [Usage](docs/Usage.md)
 * [Tests output](docs/Tests_output.md)
 
