@@ -1,0 +1,25 @@
+language: node_js
+
+node_js:
+  - "4.1"
+  - "4.0"
+  - "0.12"
+  - "0.10"
+  - "iojs"
+
+jdk:
+  - oraclejdk7
+
+env:
+  # test across multiple versions of Neo4j:
+  - NEO4J_VERSION="2.3.0"
+
+before_install:
+  # install Neo4j locally:
+  - wget dist.neo4j.org/neo4j-community-$NEO4J_VERSION-unix.tar.gz
+  - tar -xzf neo4j-community-$NEO4J_VERSION-unix.tar.gz
+  - mkdir -p neo4j-community-$NEO4J_VERSION/data/dbms
+  - cp test/utils/auth neo4j-community-$NEO4J_VERSION/data/dbms/
+  - neo4j-community-$NEO4J_VERSION/bin/neo4j start
+
+script: npm run test-travis
