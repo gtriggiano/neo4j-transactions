@@ -2,7 +2,7 @@ var http = require('http')
 var path = require('path')
 var targz = require('tar.gz')
 var Promise = require('bluebird')
-var fs = Promise.promisifyAll(require("fs"));
+var fs = Promise.promisifyAll(require('fs'))
 var rmdir = require('rimraf')
 var fsx = require('fs.extra')
 
@@ -16,8 +16,8 @@ var neo4jAuthFileSource = path.resolve(moduleBase, 'test/utils/auth')
 var neo4jAuthTargetDir = path.resolve(neo4jDirectory, 'data/dbms')
 var neo4jArchiveDirecotry = path.resolve(moduleBase, 'neo4j-community-' + neo4jVersion)
 
-function download(url, dest) {
-  return new Promise(function(resolve, reject) {
+function download (url, dest) {
+  return new Promise(function (resolve, reject) {
     var file = fs.createWriteStream(dest)
 
     http.get(url)
@@ -36,18 +36,16 @@ function download(url, dest) {
         file.end()
         resolve()
       })
-
     })
     .on('error', function (err) {
       fs.unlink(dest)
       reject(err.message)
     })
-
   })
 }
 
-function rmDirectory(directory) {
-  return new Promise(function(resolve, reject) {
+function rmDirectory (directory) {
+  return new Promise(function (resolve, reject) {
     rmdir(directory, function (err) {
       if (err) return reject(err)
       resolve()
@@ -55,8 +53,8 @@ function rmDirectory(directory) {
   })
 }
 
-function mkdirp(directory) {
-  return new Promise(function(resolve, reject) {
+function mkdirp (directory) {
+  return new Promise(function (resolve, reject) {
     fsx.mkdirp(directory, function (err) {
       if (err) return reject(err)
       resolve()
@@ -64,8 +62,8 @@ function mkdirp(directory) {
   })
 }
 
-function cpFile(source, dest) {
-  return new Promise(function(resolve, reject) {
+function cpFile (source, dest) {
+  return new Promise(function (resolve, reject) {
     fsx.copy(source, dest, function (err) {
       if (err) return reject(err)
       resolve()
