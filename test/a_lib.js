@@ -2,7 +2,7 @@ require('should')
 var Neo4j = require('../lib')
 var Client = require('../lib/Client')
 // return
-describe('Neo4j([options])', () => {
+describe('Neo4j([options])', function () {
   it('should be a function', function () {
     Neo4j.should.be.a.Function()
   })
