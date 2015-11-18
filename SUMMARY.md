@@ -1,5 +1,5 @@
 # Summary
 
-* [Introduction](SUMMARY.md)
+* [Summary](SUMMARY.md)
 * [Introduction](docs/Introduction.md)
 
