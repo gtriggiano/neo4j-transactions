@@ -1,5 +1,7 @@
 # Api Documentation
 
+## Client factory
+
 The module exports a factory function to produce Neo4j Transaction clients.
 The function takes an optional `options` parameter to configure the client.
 ```javascript
@@ -18,3 +20,8 @@ var neo4jClient = Neo4j(options)
 | `credentials` | `undefined` | An object with both a `username` and a `password` property. Ex: ```{username: 'neo4j', password: 'mypass'}```  |
 
 The produced `neo4jClient` is an instance of [Client](client.md)
+
+## Errors constructors
+The module exports also the list of errors constructor used by the library.
+
+See [Errors](errors.md)
