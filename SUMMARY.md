@@ -6,4 +6,5 @@
 * [Usage](docs/Usage.md)
 * [Tests output](docs/Tests_output.md)
 * Api docs
+   * Client factory
 
