@@ -419,6 +419,7 @@ describe('Client instance', function () {
     it('should be re-setted every time a child transaction (commit|transact|extend|rollback) call succesfully comunicates with the database', function (done) {
       var client = new Client({credentials: testCredentials})
       var previousDatabaseAvaliable = client.databaseAvaliable
+
       client.databaseAvaliable
       .then(function () {
         var tx = client.transaction()
@@ -426,6 +427,7 @@ describe('Client instance', function () {
         return tx.extend()
           .then(function () {
             ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+            client.databaseAvaliable.isFulfilled().should.be.true()
             previousDatabaseAvaliable = client.databaseAvaliable
             return tx.transact([
               tx.stmt('MATCH (n) RETURN n')
@@ -433,6 +435,7 @@ describe('Client instance', function () {
           })
           .then(function () {
             ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+            client.databaseAvaliable.isFulfilled().should.be.true()
             previousDatabaseAvaliable = client.databaseAvaliable
             return tx.commit([
               tx.stmt('MATCH (n) RETURN n')
@@ -440,6 +443,7 @@ describe('Client instance', function () {
           })
           .then(function () {
             ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+            client.databaseAvaliable.isFulfilled().should.be.true()
             previousDatabaseAvaliable = client.databaseAvaliable
 
             var tx = client.transaction()
@@ -447,11 +451,13 @@ describe('Client instance', function () {
             return tx.extend()
               .then(function () {
                 ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+                client.databaseAvaliable.isFulfilled().should.be.true()
                 previousDatabaseAvaliable = client.databaseAvaliable
                 return tx.rollback()
               })
               .then(function () {
                 ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+                client.databaseAvaliable.isFulfilled().should.be.true()
               })
           })
       })
@@ -472,16 +478,19 @@ describe('Client instance', function () {
         return tx.extend()
           .catch(errors.DatabaseUnavaliable, function () {
             ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+            client.databaseAvaliable.isRejected().should.be.true()
             previousDatabaseAvaliable = client.databaseAvaliable
             return tx.commit()
           })
           .catch(errors.DatabaseUnavaliable, function () {
             ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+            client.databaseAvaliable.isRejected().should.be.true()
             previousDatabaseAvaliable = client.databaseAvaliable
             return tx.transact()
           })
           .catch(errors.DatabaseUnavaliable, function () {
             ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+            client.databaseAvaliable.isRejected().should.be.true()
             previousDatabaseAvaliable = client.databaseAvaliable
             tx._transactionEndpoint = originalTransactionEndpoint
             return tx.transact()

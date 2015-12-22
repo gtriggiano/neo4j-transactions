@@ -530,6 +530,7 @@ client.databaseAvaliable
   return tx.extend()
     .then(function () {
       ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+      client.databaseAvaliable.isFulfilled().should.be.true()
       previousDatabaseAvaliable = client.databaseAvaliable
       return tx.transact([
         tx.stmt('MATCH (n) RETURN n')
@@ -537,6 +538,7 @@ client.databaseAvaliable
     })
     .then(function () {
       ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+      client.databaseAvaliable.isFulfilled().should.be.true()
       previousDatabaseAvaliable = client.databaseAvaliable
       return tx.commit([
         tx.stmt('MATCH (n) RETURN n')
@@ -544,16 +546,19 @@ client.databaseAvaliable
     })
     .then(function () {
       ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+      client.databaseAvaliable.isFulfilled().should.be.true()
       previousDatabaseAvaliable = client.databaseAvaliable
       var tx = client.transaction()
       return tx.extend()
         .then(function () {
           ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+          client.databaseAvaliable.isFulfilled().should.be.true()
           previousDatabaseAvaliable = client.databaseAvaliable
           return tx.rollback()
         })
         .then(function () {
           ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+          client.databaseAvaliable.isFulfilled().should.be.true()
         })
     })
 })
@@ -575,16 +580,19 @@ client.databaseAvaliable
   return tx.extend()
     .catch(errors.DatabaseUnavaliable, function () {
       ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+      client.databaseAvaliable.isRejected().should.be.true()
       previousDatabaseAvaliable = client.databaseAvaliable
       return tx.commit()
     })
     .catch(errors.DatabaseUnavaliable, function () {
       ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+      client.databaseAvaliable.isRejected().should.be.true()
       previousDatabaseAvaliable = client.databaseAvaliable
       return tx.transact()
     })
     .catch(errors.DatabaseUnavaliable, function () {
       ;(previousDatabaseAvaliable !== client.databaseAvaliable).should.be.true()
+      client.databaseAvaliable.isRejected().should.be.true()
       previousDatabaseAvaliable = client.databaseAvaliable
       tx._transactionEndpoint = originalTransactionEndpoint
       return tx.transact()
